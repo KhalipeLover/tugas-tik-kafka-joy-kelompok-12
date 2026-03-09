@@ -4,9 +4,9 @@
 // ===============================
 async function fetchDashboardData() {
   const [
-    teachers,
-    students,
-    classes,
+    Teachers,
+    Students,
+    Classes,
     lessons,
     schedules
   ] = await Promise.all([
@@ -18,9 +18,9 @@ async function fetchDashboardData() {
   ]);
 
   return {
-    Teachers_rows: teachers,
-    Students_rows: students,
-    Classes_rows: classes,
+    Teachers_rows: Teachers,
+    Students_rows: Students,
+    Classes_rows: Classes,
     lessons_rows: lessons,
     lesson_schedule_rows: schedules
   };
@@ -30,13 +30,13 @@ async function fetchDashboardData() {
 // RENDER STAT KE CARD
 // ===============================
 function renderStats(data) {
-  document.getElementById("teachers").textContent =
+  document.getElementById("Teachers").textContent =
     data.teachers_rows.length;
 
-  document.getElementById("students").textContent =
+  document.getElementById("Students").textContent =
     data.students_rows.length;
 
-  document.getElementById("classes").textContent =
+  document.getElementById("Classes").textContent =
     data.classes_rows.length;
 
   document.getElementById("lessons").textContent =
@@ -62,5 +62,6 @@ async function initDashboard() {
 }
 
 initDashboard();
+
 
 
