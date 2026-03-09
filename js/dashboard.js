@@ -7,7 +7,7 @@ async function fetchDashboardData() {
     Teacher,
     Student,
     Class,
-    lessons,
+    lesson,
     schedule
   ] = await Promise.all([
     fetch("data/Teacher_rows.json").then(r => r.json()),
@@ -21,8 +21,8 @@ async function fetchDashboardData() {
     Teacher_rows: Teachers,
     Student_rows: Students,
     Class_rows: Class,
-    lesson_rows: lessons,
-    lesson_schedule_rows: schedules
+    lesson_rows: lesson,
+    lesson_schedule_rows: schedule
   };
 }
 
@@ -62,6 +62,7 @@ async function initDashboard() {
 }
 
 initDashboard();
+
 
 
 
