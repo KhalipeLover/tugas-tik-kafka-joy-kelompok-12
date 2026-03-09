@@ -4,24 +4,24 @@
 // ===============================
 async function fetchDashboardData() {
   const [
-    Teachers,
-    Students,
-    Classes,
+    Teacher,
+    Student,
+    Class,
     lessons,
-    schedules
+    schedule
   ] = await Promise.all([
-    fetch("data/Teachers_rows.json").then(r => r.json()),
-    fetch("data/Students_rows.json").then(r => r.json()),
-    fetch("data/Classes_rows.json").then(r => r.json()),
-    fetch("data/lessons_rows.json").then(r => r.json()),
+    fetch("data/Teacher_rows.json").then(r => r.json()),
+    fetch("data/Student_rows.json").then(r => r.json()),
+    fetch("data/Class_rows.json").then(r => r.json()),
+    fetch("data/lesson_rows.json").then(r => r.json()),
     fetch("data/lesson_schedule_rows.json").then(r => r.json())
   ]);
 
   return {
-    Teachers_rows: Teachers,
-    Students_rows: Students,
-    Classes_rows: Classes,
-    lessons_rows: lessons,
+    Teacher_rows: Teachers,
+    Student_rows: Students,
+    Class_rows: Class,
+    lesson_rows: lessons,
     lesson_schedule_rows: schedules
   };
 }
@@ -62,6 +62,7 @@ async function initDashboard() {
 }
 
 initDashboard();
+
 
 
 
