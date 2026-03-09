@@ -31,13 +31,13 @@ async function fetchDashboardData() {
 // ===============================
 function renderStats(data) {
   document.getElementById("Teachers").textContent =
-    data.teacher_rows.length;
+    data.Teacher_rows.length;
 
   document.getElementById("Students").textContent =
-    data.student_rows.length;
+    data.Student_rows.length;
 
   document.getElementById("Classes").textContent =
-    data.class_rows.length;
+    data.Class_rows.length;
 
   document.getElementById("lessons").textContent =
     data.lesson_rows.length;
@@ -62,6 +62,7 @@ async function initDashboard() {
 }
 
 initDashboard();
+
 
 
 
