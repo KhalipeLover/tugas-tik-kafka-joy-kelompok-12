@@ -30,19 +30,19 @@ async function fetchDashboardData() {
 // RENDER STAT KE CARD
 // ===============================
 function renderStats(data) {
-  document.getElementById("Teachers").textContent =
+  document.getElementById("Teacher").textContent =
     data.Teacher_rows.length;
 
-  document.getElementById("Students").textContent =
+  document.getElementById("Student").textContent =
     data.Student_rows.length;
 
-  document.getElementById("Classes").textContent =
+  document.getElementById("Class").textContent =
     data.Class_rows.length;
 
-  document.getElementById("lessons").textContent =
+  document.getElementById("lesson").textContent =
     data.lesson_rows.length;
 
-  document.getElementById("schedules").textContent =
+  document.getElementById("schedule").textContent =
     data.lesson_schedule_rows.length;
 
   document.getElementById("stats").classList.remove("opacity-60");
@@ -62,6 +62,7 @@ async function initDashboard() {
 }
 
 initDashboard();
+
 
 
 
